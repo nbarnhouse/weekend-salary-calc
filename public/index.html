@@ -14,12 +14,12 @@
     <h2>Add Employee</h2>
 
     <form id="myForm" onsubmit="addEmp(event)">
-      <input class="field" type="text" id="first_input" name="first_input" placeholder="First Name">
-      <input class="field" type="text" id="last_input" name="last_input" placeholder="Last Name">
-      <input class="field" type="number" id="id_number_input" name="id_number_input" placeholder="ID">
-      <input class="field" type="text" id="title_input" name="title_input" placeholder="Title">
-      <input class="field" type="number" id="salary_input" name="salary_input" placeholder="Annual Salary"> <br>
-      <input type="submit" id="submit" name="submit">
+      <input class="field" type="text" data-testid="firstNameInput" id="firstNameInput" name="firstNameInput" placeholder="First Name">
+      <input class="field" type="text" data-testid="lastNameInput" id="lastNameInput" name="lastNameInput" placeholder="Last Name">
+      <input class="field" type="number" data-testid="idInput" id="idInput" name="idInput" placeholder="ID">
+      <input class="field" type="text" data-testid="titleInput" id="titleInput" name="titleInput" placeholder="Title">
+      <input class="field" type="number" data-testid="annualSalaryInput" id="annualSalaryInput" name="annualSalaryInput" placeholder="Annual Salary"> <br>
+      <input type="submit" data-testid="submitButton" id="submit" name="submit">
     
     </form>
 
@@ -42,7 +42,7 @@
           <td>Barnhouse</td>
           <td>44567</td>
           <td>Project Manager</td>
-          <td>$12,000</td>
+          <td>$72,000</td>
           <td><button onclick="this.closest('tr').remove()">Delete</button></td>
         </tr>
       </tbody> 
@@ -50,7 +50,7 @@
   </main>
 
   <footer>
-    <p>Total Monthly:<span id="total_monthly">$15,000</span></p>
+    <p>Total Monthly:<span id="total_monthly">$5,000</span></p>
   </footer>
 
 </body>
