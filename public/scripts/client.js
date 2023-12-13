@@ -16,8 +16,8 @@ function addEmp(event) {
     let titleVal = document.querySelector('#titleInput').value;
     let salaryVal = document.querySelector('#annualSalaryInput').value;
 
-        // Add The employee Data to the page
-        let employeeTable = document.querySelector('#employeeData');
+    // Add The employee Data to the page
+    let employeeTable = document.querySelector('#employeeData');
 
        employeeTable.innerHTML += `
             <tr>
@@ -31,10 +31,20 @@ function addEmp(event) {
         `;
         currentIndex += 1;
 
-        console.log(`Current Index: ${currentIndex}`)
-        form.reset();
+    //Bring in Monthly Total to the page
+    let totalIncomeMonthly = document.querySelector('#TotalMonthly');
 
-        
+    totalMonthly += 6000 + salaryVal / 12;
+    totalMonthly = totalMonthly.toFixed(2);
+    totalIncomeMonthly.innerHTML = `${totalMonthly}`;
 
-}
+    if (totalMonthly > 20000) {
+        totalIncomeMonthly.classList.add('over-budget');
+    };
 
+    console.log(`Current Index: ${currentIndex}`)
+    form.reset();
+
+};
+
+ 
